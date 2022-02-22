@@ -1,0 +1,25 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.item {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+p {
+    font-size: 25px;
+    font-weight: 600; 
+}
+.text {
+    font-size: 18px;
+    font-weight: 300;
+    margin:0 20px 0 5px;
+}
+.content {
+    justify-content: space-between;
+}

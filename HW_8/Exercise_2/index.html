@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/library_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+<div class="container">
+    <p>Inputs</p>
+    <div class="item_content">    
+        <input class="default" type="text" name="text" placeholder="Enter some text">
+        <input class="valid" type="text" name="text" value="valid text" disabled>
+        <input class="invalid" type="text" name="text" value="invalid text" disabled>
+    </div>
+    <p>Check boxes</p>
+    <div class="item">
+        <label class="check">
+            <input class="checkbox" type="checkbox">
+            <span class="on"></span>
+        </label> 
+        <span class="text">Subscribe</span>
+        <label class="check">
+            <input class="checkbox" type="checkbox">
+            <span class="off"></span>
+        </label> 
+        <span class="text">Subscribe</span>
+    </div>
+    <p>Radio buttons</p>
+    <div class="item">
+        <span class="text">Gender:</span>
+        <label class="radio_buttons">
+            <input class="radio" type="radio">
+            <span class="off_radio"></span>
+        </label>
+        <span class="text">Male</span> 
+        <label class="radio_buttons">
+            <input class="radio" type="radio">
+            <span class="on_radio"></span>
+        </label>
+        <span class="text">Female</span>
+    </div>
+    <p>Buttons</p>
+    <div class="item_content">
+        <button class="green">Active</button>
+        <button class="dark_green">Hover</button>
+        <button class="red">Denger</button>
+        <button class="burgundy">Hover</button>
+        <button class="gray">Disabled</button>
+        <button class="green circle">+</button>
+        <button class="red circle">-</button>
+    </div>
+    <p>Text area</p>
+    <textarea>Enter some text...</textarea>
+</div> 
+</body>
+</html>
