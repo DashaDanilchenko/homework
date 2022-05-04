@@ -83,7 +83,6 @@
     color: white;
     font-size: 15px;
     font-weight: 700;
-    align-items: center;
     div:not(:nth-child(2)) {
         text-align: center;
     }
@@ -96,13 +95,10 @@
 .header_markup {
     padding: 10px;
     border-top: 2px solid rgb(197, 195, 195);
-    align-items: center;
     div:not(:nth-child(2)) {
         text-align: center;
     }
     div {
-        padding: 5px;
-        align-items: center;
         select, textarea {
             height: 40px;
             border-radius: 3px;

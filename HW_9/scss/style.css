@@ -99,9 +99,6 @@
   color: white;
   font-size: 15px;
   font-weight: 700;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header_info div:not(:nth-child(2)) {
@@ -115,20 +112,10 @@
 .header_markup {
   padding: 10px;
   border-top: 2px solid #c5c3c3;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header_markup div:not(:nth-child(2)) {
   text-align: center;
-}
-
-.header_markup div {
-  padding: 5px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header_markup div select, .header_markup div textarea {
