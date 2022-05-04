@@ -128,4 +128,159 @@
 .header_markup div select {
   width: 70px;
 }
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(63, 62, 62, 0.4);
+  z-index: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.popup_wrap {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  background: white;
+  position: relative;
+  border-radius: 5px;
+}
+
+.popup_wrap .new_hw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #c5c3c3;
+  padding: 20px;
+}
+
+.popup_wrap .new_hw .cross {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.popup_wrap .new_hw .cross span {
+  width: 22px;
+  height: 2px;
+  background: #6d6c6c;
+  border-radius: 1px;
+}
+
+.popup_wrap .new_hw .cross span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popup_wrap .new_hw .cross span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: -2px;
+}
+
+.popup_wrap .new_hw p {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+form {
+  margin: 30px 20px;
+}
+
+form input[type="text"] {
+  margin-bottom: 30px;
+  width: 270px;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  border: 2px solid #c5c3c3;
+}
+
+form .input_file {
+  position: absolute;
+}
+
+form .input_file input[type="file"]:before {
+  content: "Choose file...";
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  background: white;
+  border-radius: 3px 0 0 3px;
+  border: 2px solid #c5c3c3;
+  padding: 3px;
+}
+
+form .input_file input[type="file"]::after {
+  content: "Browse";
+  width: 70px;
+  height: 30px;
+  position: absolute;
+  background: #aaa8a8;
+  left: 198px;
+  border-radius: 0 3px 3px 0;
+  border: 2px solid #c5c3c3;
+  padding: 3px 10px;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
+  border-top: 2px solid #c5c3c3;
+  padding: 20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.button .close {
+  background: gray;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button .save {
+  background: #17a2b8;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button button {
+  width: 70px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.active_popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.css.map */
