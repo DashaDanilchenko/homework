@@ -7,3 +7,10 @@ let yourArray = [1, 2, 'a', 'b', true]
 
 console.log(yourArray)
 
+// 2
+// In order to complete this challenge, set the 2nd position (index 1) of myArray to anything you want, besides the letter b
+
+let myArray = ["a", "b", "c", "d"];
+myArray[1] = "not b anymore"
+
+console.log(myArray);
