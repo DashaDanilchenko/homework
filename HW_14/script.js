@@ -211,19 +211,21 @@ console.log(userActivity);
 // Return the current value of the scannedItem key in the foods object.
 // You can assume that only valid keys will be provided as an argument to checkInventory.
 
-let vegetables = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27
-};
 
 function checkInventory(scannedItem) {
   
-return vegetables[scannedItem]
+return foods[scannedItem]
   
 }
 
 console.log(checkInventory("apples"));
+
+
+// 16
+// Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
+
+delete foods.oranges
+delete foods.plums
+delete foods.strawberries
+
+console.log(foods);
