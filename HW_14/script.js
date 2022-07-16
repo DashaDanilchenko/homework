@@ -229,3 +229,46 @@ delete foods.plums
 delete foods.strawberries
 
 console.log(foods);
+
+
+//17
+// Finish writing the function so that it returns true if the object passed to it contains
+// all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise.
+
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+
+let name = ['Alan', 'Jeff', 'Sarah', 'Ryan']
+
+function isEveryoneHere(userObj) {
+
+let booleanUser = []
+for (let i=0 ;i<name.length; i++) {
+ booleanUser.push(userObj.hasOwnProperty(name[i]))
+}
+if (booleanUser.includes(false)) {
+ return false 
+} else {
+return true 
+}
+}
+
+console.log(isEveryoneHere(users)); 
