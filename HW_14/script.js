@@ -272,3 +272,40 @@ return true
 }
 
 console.log(isEveryoneHere(users)); 
+
+
+//18
+// We've defined a function countOnline which accepts one argument (a users object).
+// Use a for...in statement within this function to loop through the users object passed into the function
+// and return the number of users whose online property is set to true. An example of a users object which could be passed to countOnline is shown below.
+// Each user will have an online property with either a true or false value.
+
+
+users = {
+  Alan: {
+    online: true
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false 
+  }, 
+}
+
+function countOnline(usersObj) {
+  
+  let quantityTrue = 0
+  
+  let key
+for (let  user in usersObj) {
+  let dataOnline = usersObj[user] 
+    for (key in dataOnline) {
+    }
+    if (dataOnline[key] === true) {
+      quantityTrue++
+    }
+}
+return quantityTrue 
+}
+console.log(countOnline(users));
