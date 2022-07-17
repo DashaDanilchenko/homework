@@ -57,3 +57,26 @@ function largestOfFour(arr) {
   }
   
   console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+
+
+//6
+// Check if a string (first argument, str) ends with the given target string (second argument, target).
+function confirmEnding(str, target) {
+    let a = []
+    let b = []
+   str = str.split("").reverse()
+   target = target.split("").reverse()
+  for (let i=0; i<target.length; i++) { 
+        a.push(target[i])
+        b.push(str[i])
+  }
+  a = a.join('')
+  b = b.join('')
+  if (a === b) {
+    return true
+  } else {
+  return  false}
+  }
+  
+  console.log(confirmEnding("Bastian", "ian"));
+
