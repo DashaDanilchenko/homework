@@ -20,3 +20,14 @@ function reverseString(str) {
   }
   
   console.log(reverseString("hello"));
+
+
+//3
+// Only integers greater than or equal to zero will be supplied to the function.
+
+
+function factorialize(num) {
+    return num ? num * factorialize(num - 1) : 1;
+  }
+  
+  console.log(factorialize(5));
