@@ -10,3 +10,13 @@ function convertCtoF(celsius) {
     return fahrenheit;
   } 
   convertCtoF(30);
+
+
+// 2
+// Your result must be a string.
+
+function reverseString(str) {
+    return str.split("").reverse().join("");
+  }
+  
+  console.log(reverseString("hello"));
