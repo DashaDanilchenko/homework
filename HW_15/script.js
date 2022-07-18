@@ -156,7 +156,7 @@ console.log(booWho(false));
 // For the purpose of this exercise, you should also capitalize connecting words like the and of.
 
 function titleCase(str) {
-  
+
   let a = str.toLowerCase().split(' ')
   let b = []
   for (let i=0; i<a.length; i++) {
@@ -171,3 +171,26 @@ function titleCase(str) {
 }
 
 console.log(titleCase("I'm a little tea pot"));
+
+
+// 12
+// You are given two arrays and an index.
+// Copy each element of the first array into the second array, in order.
+// Begin inserting elements at index n of the second array.
+// Return the resulting array. The input arrays should remain the same after the function runs.
+
+function frankenSplice(arr1, arr2, n) {
+  let a = []
+  for (let i=0; i<n; i++) {
+    a.push(arr2[i])
+  }
+  for (let i=0; i<arr1.length; i++) {
+    a.push(arr1[i])
+  }
+  for (let i=n; i<arr2.length; i++) {
+    a.push(arr2[i])
+  }
+  return a;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
