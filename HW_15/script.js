@@ -98,3 +98,28 @@ function repeatStringNumTimes(str, num) {
 
 console.log(repeatStringNumTimes("abc", -2));
 
+
+//8
+// Truncate a string (first argument) if it is longer than the given maximum string length (second argument).
+// Return the truncated string with a ... ending.
+
+function truncateString(str, num) {
+  if (str.split('').length < num) {
+    return str 
+  } 
+  if (str.split(', ')[0].split('').length === num) {
+    return str.split(', ')[0]
+  }
+  else {  
+str = str.slice(0, num).split(', ')
+console.log(str)
+let a = str.splice(2, 0, '...')
+str = str.join('')
+console.log(a)
+console.log(str) 
+  } 
+return str
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 10));
+
