@@ -194,3 +194,21 @@ function frankenSplice(arr1, arr2, n) {
 }
 
 console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
+
+//13
+// Remove all falsy values from an array.
+// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+// Hint: Try converting each value to a Boolean.
+
+function bouncer(arr) {
+  let a = []
+  a  = arr.filter(i =>  typeof i === "number" && isNaN(i) !== isNaN(NaN)||typeof i === "string")
+  a = a.filter(i => i)
+
+  console.log(arr)
+  return a; 
+  
+} 
+
+console.log(bouncer([7, "ate", "", false, 9, false, null, 0, NaN, undefined, 'suny'])); 
