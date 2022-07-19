@@ -212,3 +212,21 @@ function bouncer(arr) {
 } 
 
 console.log(bouncer([7, "ate", "", false, 9, false, null, 0, NaN, undefined, 'suny'])); 
+
+
+// 14
+// Return the lowest index at which a value (second argument) should be inserted into an array (first argument)
+// once it has been sorted. The returned value should be a number.
+
+function getIndexToIns(arr, num) {
+  
+  arr.push(num)
+  arr.sort((a ,b) => a-b)
+  console.log(arr)
+  for (let i=0; i<arr.length; i++) {
+    if (arr[i] === num)
+    return Number(i);
+  }
+}
+
+console.log(getIndexToIns([40,20, 60], 50));
