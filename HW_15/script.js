@@ -230,3 +230,22 @@ function getIndexToIns(arr, num) {
 }
 
 console.log(getIndexToIns([40,20, 60], 50));
+
+
+// 15
+// Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+
+function mutation(arr) {
+  let arrBoolean = []
+  let i
+  for (i=0; i<arr[1].length; i++) {
+   arrBoolean.push(arr[0].toUpperCase().includes(arr[1][i].toUpperCase()))
+  }
+  if (arrBoolean.includes(false)) {
+    return false
+  } else {
+    return true     
+  }
+}
+
+console.log(mutation(["hello", "hey"])); 
