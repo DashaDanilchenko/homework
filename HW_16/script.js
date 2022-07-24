@@ -46,3 +46,15 @@ image.alt = "Cute Puppy"
 
 // Append that image to the wrapper
 shell.append(image)
+
+// with HTML string, make a div, with two paragraphs inside of it
+// put this div before the unordered list from above
+const text = shell.nextElementSibling
+shell.prepend(text)
+
+// add a class to the second paragraph called warning
+// remove the first paragraph
+const paragraphTwo = text.lastElementChild
+paragraphTwo.classList.add('warning')
+const paragraphOne = text.firstElementChild
+paragraphOne.remove()
