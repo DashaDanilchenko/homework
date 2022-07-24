@@ -1,0 +1,16 @@
+.classShell {
+    width: calc(100% - 80px);
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    width: auto;
+    margin: 0 auto;
+    
+}
+
+li {
+    padding: 5px;
+}
