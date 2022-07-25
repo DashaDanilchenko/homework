@@ -58,3 +58,38 @@ const paragraphTwo = text.lastElementChild
 paragraphTwo.classList.add('warning')
 const paragraphOne = text.firstElementChild
 paragraphOne.remove()
+
+// create a function called generatePlayerCard that takes in three arguments: name, age, and height
+// have that function return html that looks like this:
+// <div class="playerCard">
+//   <h2>NAME — AGE</h2>
+//   <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
+// </div>
+
+const user = document.createElement('div')
+
+function generatePlayerCard (name, age, height) {
+    const poppy = document.createElement('div')
+    poppy.classList.add('playerCard')
+    poppy.innerText= `
+        <h2>${name} — ${age}</h2>
+        <p>They are ${height} and ${age} years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
+    `
+    return poppy
+} 
+
+// make a new div with a class of cards
+const cards = document.createElement('div')
+cards.classList.add('cards')
+
+// make 4 player cards using generatePlayerCard
+const maylo = generatePlayerCard('Maylo', 1, 40)
+const patron = generatePlayerCard('Patron', 2, 50)
+const rex = generatePlayerCard('Rex', 3, 80)
+const bolt = generatePlayerCard('Bolt', 4, 70)
+
+// append those cards to the div
+cards.append(maylo)
+cards.append(patron)
+cards.append(rex)
+cards.append(bolt)
