@@ -8,7 +8,6 @@
 ul {
     width: auto;
     margin: 0 auto;
-    
 }
 
 li {
@@ -19,12 +18,35 @@ li {
     margin: 20px auto;
 }
 
-p {
-   
-    margin: 10px;
-}
-
 .classShell div {
     width: auto;
     margin: 0 auto;
+}
+
+.playerCard {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 50px;
+    height: 30px;
+    padding: 5px 15px;
+    background-color: rgb(165, 100, 100);
+    border-radius: 3px;
+    align-self: flex-end;
+}
+
+i {
+   transform: scale(1.5);
+}
+
+button:hover {
+    background-color: rgb(158, 49, 49);
+    transform: scale(1.2);
 }

@@ -71,10 +71,14 @@ const user = document.createElement('div')
 function generatePlayerCard (name, age, height) {
     const poppy = document.createElement('div')
     poppy.classList.add('playerCard')
-    poppy.innerText= `
+    poppy.innerHTML= `
         <h2>${name} — ${age}</h2>
         <p>They are ${height} and ${age} years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
     `
+    const button = document.createElement('button')
+    button.innerHTML = `<i class="fa-solid fa-trash-arrow-up"></i>`
+    // button.addEventListener('click', returnCard)
+    poppy.append(button)
     return poppy
 } 
 
@@ -86,10 +90,25 @@ cards.classList.add('cards')
 const maylo = generatePlayerCard('Maylo', 1, 40)
 const patron = generatePlayerCard('Patron', 2, 50)
 const rex = generatePlayerCard('Rex', 3, 80)
-const bolt = generatePlayerCard('Bolt', 4, 70)
+const bolto = generatePlayerCard('Bolto', 4, 70)
 
 // append those cards to the div
 cards.append(maylo)
 cards.append(patron)
 cards.append(rex)
-cards.append(bolt)
+cards.append(bolto)
+
+// put the div into the DOM just before the wrapper element
+document.body.prepend(cards)
+                    
+// Bonus, put a delete Button on each card so when you click it, the whole card is removed
+                  
+// select all the buttons!
+const arrBtn = document.querySelectorAll('button')
+
+// make out delete function
+// loop over them and attach a listener
+function returnCard (i) {
+    i.addEventListener('click', ()=> (i.parentElement).remove())
+} 
+arrBtn.forEach(returnCard)               
