@@ -72,10 +72,13 @@ function confirmEnding(str, target) {
   }
   a = a.join('')
   b = b.join('')
-  if (a === b) {
-    return true
-  } else {
-  return  false}
+  // look at substring methods
+  
+  // if (a === b) {
+  //   return true
+  // } else {
+  // return  false}
+  return a === b
   }
   
   console.log(confirmEnding("Bastian", "ian"));
@@ -110,6 +113,7 @@ function truncateString(str, num) {
   if (str.split(', ')[0].split('').length === num) {
     return str.split(', ')[0]
   }
+    //after return in if we don't need else
   else {  
 str = str.slice(0, num).split(', ')
 console.log(str)
@@ -131,7 +135,7 @@ console.log(truncateString("A-tisket a-tasket A green and yellow basket", 10));
 function findElement(arr, func) {
   
   return  arr.filter(func)[0]
-   
+   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
   }
   console.log(findElement([1, 2, 3, 9], num => num % 2 === 0));
 
@@ -141,6 +145,7 @@ function findElement(arr, func) {
 // Boolean primitives are true and false.
 
 function booWho(bool) {
+    //we don't need if else here. just return bool === Boolean(bool)
   if (bool === Boolean(bool)) {
     return true
   } else {
@@ -162,7 +167,7 @@ function titleCase(str) {
   for (let i=0; i<a.length; i++) {
     let firstLetter = a[i][0].toUpperCase()
     let nextLetter = a[i].slice(1, (a[i].length))
-    let word = firstLetter + nextLetter
+    let word = firstLetter + nextLetter // nextLetters 
      b.push(word) 
   }
   
@@ -184,6 +189,8 @@ function frankenSplice(arr1, arr2, n) {
   for (let i=0; i<n; i++) {
     a.push(arr2[i])
   }
+    
+    // const result = [...arr2] it's copy of arr. find rest operator
   for (let i=0; i<arr1.length; i++) {
     a.push(arr1[i])
   }
@@ -205,10 +212,10 @@ function bouncer(arr) {
   let a = []
   a  = arr.filter(i =>  typeof i === "number" && isNaN(i) !== isNaN(NaN)||typeof i === "string")
   a = a.filter(i => i)
-
+    
   console.log(arr)
   return a; 
-  
+  // return arr.filter(Boolean)
 } 
 
 console.log(bouncer([7, "ate", "", false, 9, false, null, 0, NaN, undefined, 'suny'])); 
@@ -241,6 +248,7 @@ function mutation(arr) {
   for (i=0; i<arr[1].length; i++) {
    arrBoolean.push(arr[0].toUpperCase().includes(arr[1][i].toUpperCase()))
   }
+    
   if (arrBoolean.includes(false)) {
     return false
   } else {
@@ -248,6 +256,11 @@ function mutation(arr) {
   }
 }
 
+function mutation(arr) {
+  const [firstWord, secondWord] = arr;
+  const secondWordLetters = secondWord.toLowerCase().split('')
+  return secondWordLetters.every(letter => firstWord.toLowerCase().includes(letter))
+}
 console.log(mutation(["hello", "hey"])); 
 
 
@@ -282,5 +295,11 @@ function chunkArrayInGroups(arr, size) {
   
     return arrSumm;
   }
-  
+  function chunkArrayInGroups(arr, size) {
+    const newArr = []
+    for(let i = 0 ; i < arr.length ; i += size){
+        newArr.push(arr.slice(i , i+size))
+    }
+    return  newArr
+  }
   console.log(chunkArrayInGroups(["a", "b", "c", "d", 5, 6, 7, 8], 2));
